@@ -1,0 +1,24 @@
+﻿@page "/navigate"
+@inject NavigationManager NavigationManager
+
+<h3>Navigator Manager</h3>
+
+<button class="btn btn-primary" @onclick="NavigateToPage2Page">
+    Navigate to page2page
+</button>
+
+<button class="btn btn-primary" @onclick="NavigateToPage2PageHaha">
+    Navigate to haha page2page
+</button>
+
+@code {
+    private void NavigateToPage2Page()
+    {
+        NavigationManager.NavigateTo("page2page");
+    }
+
+    private void NavigateToPage2PageHaha()
+    {
+        NavigationManager.NavigateTo("page2page/Haha");
+    }
+}

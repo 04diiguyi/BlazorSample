@@ -1,0 +1,12 @@
+﻿<h3>The following is Display Component content</h3>
+
+<p class="card-text">Name From Page: @ChildName</p>
+
+@code {
+    [Parameter]
+    public string ChildName { get; set; }
+
+    [Parameter]
+    public EventCallback<string> ChildNameChanged { get; set; }
+
+}

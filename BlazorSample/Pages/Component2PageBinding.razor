@@ -1,0 +1,13 @@
+﻿@page "/component2page"
+
+<h3>The following is Page content</h3>
+
+<Component2Page @bind-InputName="Name" />
+
+
+<Page2Component @bind-ChildName="Name" />
+
+@code{
+    [Parameter]
+    public string Name { get; set; }
+}

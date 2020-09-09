@@ -1,0 +1,14 @@
+﻿@page "/page2page"
+@page "/page2page/{text}"
+
+<h1>Page to Page is @Text!</h1>
+
+@code {
+    [Parameter]
+    public string Text { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Text = Text ?? "working";
+    }
+}

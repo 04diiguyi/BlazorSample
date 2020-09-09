@@ -1,0 +1,17 @@
+﻿@page "/page2component"
+
+<h3>The following is Page content</h3>
+
+<button @onclick="GenerateName">Generate a name</button>
+
+<Page2Component @bind-ChildName="Name"/>
+
+@code{
+    [Parameter]
+    public string Name { get; set; }
+
+    private void GenerateName()
+    {
+        Name = "Name from parent";
+    }
+}

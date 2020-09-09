@@ -1,0 +1,21 @@
+﻿<h3>The following is Input Component content</h3>
+
+<input @oninput="OnInputNameChanged"
+       required
+       type="text"
+       value="@InputName" />
+
+@code {
+    [Parameter]
+    public string InputName { get; set; }
+
+    [Parameter]
+    public EventCallback<string> InputNameChanged { get; set; }
+
+    private Task OnInputNameChanged(ChangeEventArgs e)
+    {
+        InputName = e.Value.ToString();
+
+        return InputNameChanged.InvokeAsync(InputName);
+    }
+}

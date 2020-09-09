@@ -1,0 +1,12 @@
+﻿<h3>Component2Component</h3>
+
+<p class="card-text">Internal Data Binding: @Data</p>
+
+@code {
+    private string Data { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Data = "I was created when the page is generated.";
+    }
+}
